@@ -16,16 +16,25 @@ export const TodoForm = ({ todos, addTodo, children }) => {
 	return (
 		<div className={styles["form-container"]}>
 			{children}
+
 			<form onSubmit={onSubmitHandler} className={styles.form}>
-				<input
-					className={styles.form__input}
-					value={text}
-					onChange={onChangeHandler}
-					placeholder="Enter new todo"
-				></input>
-				<button className={styles.form__btn} type="submit">
-					Submit
-				</button>
+				<label className={styles.form__label} htmlFor="form__input">
+					ADD TASK
+				</label>
+
+				<div className={styles["form__input-wrapper"]}>
+					<input
+						id="form__input"
+						className={styles.form__input}
+						value={text}
+						onChange={onChangeHandler}
+						placeholder="Enter new todo"
+					></input>
+
+					<button className={styles.form__btn} type="submit">
+						Submit
+					</button>
+				</div>
 			</form>
 			<TodoList todos={todos} />
 		</div>
