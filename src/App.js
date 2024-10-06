@@ -12,7 +12,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<h1>Todo APP</h1>
+			<h1 className="header">Todo APP</h1>
 			<TodoForm addTodo={addTodoHandler} />
 			<TodoList todos={todos} />
 		</div>
