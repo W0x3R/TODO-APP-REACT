@@ -2,7 +2,7 @@ import { useState } from "react"
 import styles from "./TodoForm.module.scss"
 import { TodoList } from "./TodoList"
 
-export const TodoForm = ({ todos, addTodo, children }) => {
+export const TodoForm = ({ todos, addTodo, deleteTodo, children }) => {
 	const [text, setText] = useState("")
 
 	const onChangeHandler = (e) => setText(e.target.value)
@@ -36,7 +36,7 @@ export const TodoForm = ({ todos, addTodo, children }) => {
 					</button>
 				</div>
 			</form>
-			<TodoList todos={todos} />
+			<TodoList deleteTodo={deleteTodo} todos={todos} />
 		</div>
 	)
 }
