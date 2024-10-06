@@ -1,1 +1,1 @@
-export const Todo = () => <h1>This is todo</h1>
+export const Todo = ({ todo }) => <h3>{todo}</h3>
