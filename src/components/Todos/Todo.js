@@ -1,1 +1,9 @@
-export const Todo = ({ todo }) => <h3>{todo}</h3>
+import styles from "./Todo.module.scss"
+
+export const Todo = ({ todo }) => {
+	return (
+		<div className={styles.todo}>
+			<div className={styles.todo__text}>{todo}</div>
+		</div>
+	)
+}
