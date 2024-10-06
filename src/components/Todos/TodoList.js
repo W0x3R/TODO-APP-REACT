@@ -1,11 +1,11 @@
 import { Todo } from "./Todo"
 
-export const TodoList = () => {
+export const TodoList = ({ todos }) => {
 	return (
 		<>
-			<Todo />
-			<Todo />
-			<Todo />
+			{todos.map((todo, i) => (
+				<Todo todo={todo} key={i} />
+			))}
 		</>
 	)
 }
