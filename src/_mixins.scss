@@ -1,0 +1,5 @@
+@mixin imageSet ($imageName) {
+	background-image: image-set(url('../public/#{$imageName}.avif') type('image/avif'),
+		('../public/#{$imageName}.webp') type('image/webp'),
+		('../public/#{$imageName}.jpg') type('image/jpg'));
+}
