@@ -75,7 +75,7 @@
 		cursor: pointer;
 
 		@include hoverOrActive {
-			border-radius: 2px;
+			color: green;
 		}
 	}
 }
