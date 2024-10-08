@@ -1,11 +1,15 @@
+@import './mixins';
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
 body {
+	@include imageSet('background');
+	background-position: center;
+	background-size: cover;
 	font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
 		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	color: white;
-	background-color: #112d49;
 }
