@@ -8,6 +8,8 @@ export const TodoForm = ({
 	addTodo,
 	deleteTodo,
 	toggleTodo,
+	resetTodo,
+	resetCompetedTodo,
 	children
 }) => {
 	const [text, setText] = useState("")
@@ -43,7 +45,13 @@ export const TodoForm = ({
 					</button>
 				</div>
 			</form>
-			<TodosActions />
+			{!!todos.length && (
+				<TodosActions
+					resetTodo={resetTodo}
+					resetCompetedTodo={resetCompetedTodo}
+				/>
+			)}
+
 			<TodoList deleteTodo={deleteTodo} toggleTodo={toggleTodo} todos={todos} />
 		</div>
 	)
