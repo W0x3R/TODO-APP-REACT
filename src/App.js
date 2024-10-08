@@ -7,7 +7,13 @@ function App() {
 	const [todos, setTodos] = useState([])
 
 	const addTodoHandler = (text) => {
-		setTodos([...todos, text])
+		const newTodo = {
+			text,
+			isCompleted: false,
+			id: uuidv4()
+		}
+
+		setTodos([...todos, newTodo])
 	}
 
 	const deleteTodoHandler = (index) => {
