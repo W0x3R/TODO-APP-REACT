@@ -1,3 +1,5 @@
+@import '../../media';
+
 .todo {
 	display: flex;
 	align-items: center;
@@ -21,6 +23,45 @@
 
 	&__icon {
 		color: black;
+	}
+
+	&_completed {
+		background-color: unset;
+		color: gray;
+		border-color: grey;
+	}
+
+	&__check-icon,
+	&__delete-icon {
+		padding: 0 5px;
+		box-sizing: content-box;
+		cursor: pointer;
+		color: lightgray;
+		font-size: 26px;
+		transition: transform 0.3s;
+
+		@include hoverOrActive {
+			transform: scale(1.2);
+		}
+	}
+
+
+	&__check-icon {
+		@include hoverOrActive {
+			color: green;
+		}
+	}
+
+	&__delete-icon {
+		@include hoverOrActive {
+			color: red;
+		}
+	}
+
+	&.todo_completed &__icon,
+	&.todo_completed &__check-icon,
+	&.todo_completed &__delete-icon {
+		color: gray;
 	}
 
 
