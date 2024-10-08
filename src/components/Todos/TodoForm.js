@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styles from "./TodoForm.module.scss"
 import { TodoList } from "./TodoList"
+import { TodosActions } from "./TodosActions"
 
 export const TodoForm = ({
 	todos,
@@ -42,6 +43,7 @@ export const TodoForm = ({
 					</button>
 				</div>
 			</form>
+			<TodosActions />
 			<TodoList deleteTodo={deleteTodo} toggleTodo={toggleTodo} todos={todos} />
 		</div>
 	)
