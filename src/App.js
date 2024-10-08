@@ -30,6 +30,14 @@ function App() {
 		)
 	}
 
+	const resetTodosHandler = () => {
+		setTodos([])
+	}
+
+	const resetCompletedTodosHandler = () => {
+		setTodos(todos.filter((todo) => todo.isCompleted === false))
+	}
+
 	return (
 		<div className="App">
 			<TodoForm
@@ -37,6 +45,8 @@ function App() {
 				addTodo={addTodoHandler}
 				deleteTodo={deleteTodoHandler}
 				toggleTodo={toggleTodoHandler}
+				resetTodo={resetTodosHandler}
+				resetCompetedTodo={resetCompletedTodosHandler}
 			>
 				<h1 className="header">Todo APP</h1>
 			</TodoForm>
