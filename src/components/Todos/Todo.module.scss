@@ -4,8 +4,8 @@
 	display: flex;
 	align-items: center;
 	gap: 0 5px;
-	padding: 8px 20px;
-	font-size: 22px;
+	padding: 8px 12px;
+	font-size: max(19px, min(3.3vw, 22px));
 	border-radius: 5px;
 	border: 2px solid #555;
 	color: #112d49;
@@ -19,6 +19,10 @@
 
 	&:not(:first-of-type) {
 		margin-bottom: 15px;
+	}
+
+	@include mobile {
+		padding: 4px 8px;
 	}
 
 	&__icon {
@@ -42,6 +46,10 @@
 
 		@include hoverOrActive {
 			transform: scale(1.2);
+		}
+
+		@include mobile {
+			font-size: 32px;
 		}
 	}
 
