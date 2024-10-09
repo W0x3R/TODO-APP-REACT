@@ -2,6 +2,7 @@ import { useState } from "react"
 import styles from "./TodoForm.module.scss"
 import { TodoList } from "./TodoList"
 import { TodosActions } from "./TodosActions"
+import { Button } from "../UI/Button"
 
 export const TodoForm = ({
 	todos,
@@ -40,10 +41,9 @@ export const TodoForm = ({
 						onChange={onChangeHandler}
 						placeholder="Enter new todo"
 					></input>
-
-					<button className={styles.form__btn} type="submit">
+					<Button type="submit" title="Submit">
 						Submit
-					</button>
+					</Button>
 				</div>
 			</form>
 			{!!todos.length && (
