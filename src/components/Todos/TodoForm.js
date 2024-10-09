@@ -41,7 +41,7 @@ export const TodoForm = ({
 						onChange={onChangeHandler}
 						placeholder="Enter new todo"
 					></input>
-					<Button type="submit" title="Submit">
+					<Button type="submit" title="Submit" disabled={!text.length}>
 						Submit
 					</Button>
 				</div>
