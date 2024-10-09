@@ -16,3 +16,14 @@
 		color: red
 	}
 }
+
+.actions__button:disabled,
+.actions__button:disabled svg {
+	background-color: lightgray;
+	color: rgb(0 0 0 / 50%);
+
+	@include hoverOrActive {
+		color: rgb(0 0 0 / 50%);
+		cursor: not-allowed;
+	}
+}
