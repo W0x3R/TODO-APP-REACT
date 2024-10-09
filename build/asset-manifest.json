@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/W0x3R/TODO-APP-REACT/static/css/main.6d40efea.css",
-    "main.js": "/W0x3R/TODO-APP-REACT/static/js/main.ee984852.js",
-    "static/media/background.jpg": "/W0x3R/TODO-APP-REACT/static/media/background.97c7ea9e860ece3f00f2.jpg",
-    "static/media/background.webp": "/W0x3R/TODO-APP-REACT/static/media/background.d67b6cd3f88bdd92d045.webp",
-    "static/media/background.avif": "/W0x3R/TODO-APP-REACT/static/media/background.dc99a9beffa4d5815203.avif",
-    "index.html": "/W0x3R/TODO-APP-REACT/index.html",
-    "main.6d40efea.css.map": "/W0x3R/TODO-APP-REACT/static/css/main.6d40efea.css.map",
-    "main.ee984852.js.map": "/W0x3R/TODO-APP-REACT/static/js/main.ee984852.js.map"
+    "main.css": "/TODO-APP-REACT/static/css/main.83dda48b.css",
+    "main.js": "/TODO-APP-REACT/static/js/main.ee984852.js",
+    "static/media/background.jpg": "/TODO-APP-REACT/static/media/background.97c7ea9e860ece3f00f2.jpg",
+    "static/media/background.webp": "/TODO-APP-REACT/static/media/background.d67b6cd3f88bdd92d045.webp",
+    "static/media/background.avif": "/TODO-APP-REACT/static/media/background.dc99a9beffa4d5815203.avif",
+    "index.html": "/TODO-APP-REACT/index.html",
+    "main.83dda48b.css.map": "/TODO-APP-REACT/static/css/main.83dda48b.css.map",
+    "main.ee984852.js.map": "/TODO-APP-REACT/static/js/main.ee984852.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d40efea.css",
+    "static/css/main.83dda48b.css",
     "static/js/main.ee984852.js"
   ]
 }

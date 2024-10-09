@@ -1,7 +1,7 @@
 {
 	"name": "99-template",
 	"version": "0.1.0",
-	"homepage": "https://github.com/W0x3R/TODO-APP-REACT",
+	"homepage": "https://w0x3r.github.io/TODO-APP-REACT/",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",
