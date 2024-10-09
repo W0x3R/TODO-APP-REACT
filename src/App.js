@@ -53,6 +53,11 @@ function App() {
 			>
 				<h1 className="header">Todo APP</h1>
 			</TodoForm>
+			{completedTodosCount > 0 && (
+				<h4 className="count">{`You have completed ${completedTodosCount} ${
+					completedTodosCount > 1 ? "todos" : "todo"
+				}`}</h4>
+			)}
 		</div>
 	)
 }
