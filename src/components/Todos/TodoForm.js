@@ -10,6 +10,7 @@ export const TodoForm = ({
 	toggleTodo,
 	resetTodo,
 	resetCompetedTodo,
+	completedTodosLength,
 	children
 }) => {
 	const [text, setText] = useState("")
@@ -49,6 +50,7 @@ export const TodoForm = ({
 				<TodosActions
 					resetTodo={resetTodo}
 					resetCompetedTodo={resetCompetedTodo}
+					completedTodosLength={completedTodosLength}
 				/>
 			)}
 
