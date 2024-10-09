@@ -20,6 +20,10 @@
 			color: green
 		}
 	}
+
+	& svg {
+		font-size: 20px;
+	}
 }
 
 .actions__button:disabled,
