@@ -1,13 +1,9 @@
 import styles from "./Button.module.scss"
 
-export const Button = ({ onClick, children, title, disabled = false }) => {
+export const Button = (props) => {
+	const { children, disabled = false } = props
 	return (
-		<button
-			className={styles.actions__button}
-			onClick={onClick}
-			title={title}
-			disabled={disabled}
-		>
+		<button {...props} className={styles.actions__button} disabled={disabled}>
 			{children}
 		</button>
 	)
