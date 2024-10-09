@@ -14,9 +14,13 @@
 
 .header {
 	margin-bottom: 20px;
-	font-size: max(32px, min(5vw, 36px));
+	font-size: max(30px, min(5vw, 36px));
 	font-weight: 500;
 	user-select: none;
+
+	@include mobile {
+		margin-bottom: 12px;
+	}
 }
 
 .count {
