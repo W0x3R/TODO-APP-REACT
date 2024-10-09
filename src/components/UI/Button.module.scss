@@ -15,6 +15,12 @@
 	@include hoverOrActive {
 		color: red
 	}
+
+	&[type='submit'] {
+		@include hoverOrActive {
+			color: green
+		}
+	}
 }
 
 .actions__button:disabled,
