@@ -1,3 +1,11 @@
+$mobile: 600px;
+
+@mixin mobile {
+	@media only screen and (max-width: $mobile) {
+		@content;
+	}
+}
+
 @mixin hoverOrActive {
 	@media (hover: hover) {
 		&:hover {
