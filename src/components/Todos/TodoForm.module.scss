@@ -49,17 +49,22 @@
 	}
 
 	&__input {
-		padding: 5px 15px;
+		padding: 5px 10px;
 		width: 77%;
 		height: 40px;
-		font-size: max(20px, min(3.3vw, 22px));
+		font-size: max(16px, min(3.3vw, 22px));
 		border: 1px solid rgb(128, 128, 128);
 		background-color: rgb(255, 255, 255);
 		border-radius: 5px;
 
+		@include mobile {
+			height: 35px;
+		}
+
 		&:focus {
 			outline: medium solid rgb(0, 0, 0);
 		}
+
 
 	}
 
