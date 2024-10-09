@@ -1,10 +1,18 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { v4 as uuidv4 } from "uuid"
 import "./App.scss"
 import { TodoForm } from "./components/Todos/TodoForm"
 
 function App() {
-	const [todos, setTodos] = useState([])
+	const getInitialTodos = () => {
+		const savedTodos = localStorage.getItem("todo")
+		return savedTodos ? JSON.parse(savedTodos) : []
+	}
+
+	const [todos, setTodos] = useState(getInitialTodos)
+	useEffect(() => {
+		localStorage.setItem("todo", JSON.stringify(todos))
+	}, [todos])
 
 	const addTodoHandler = (text) => {
 		const newTodo = {
@@ -12,20 +20,17 @@ function App() {
 			isCompleted: false,
 			id: uuidv4()
 		}
-
-		setTodos([...todos, newTodo])
+		setTodos((prevTodos) => [...prevTodos, newTodo])
 	}
 
 	const deleteTodoHandler = (id) => {
-		setTodos(todos.filter((el) => el.id !== id))
+		setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id))
 	}
 
 	const toggleTodoHandler = (id) => {
-		setTodos(
-			todos.map((todo) =>
-				todo.id === id
-					? { ...todo, isCompleted: !todo.isCompleted }
-					: { ...todo }
+		setTodos((prevTodos) =>
+			prevTodos.map((todo) =>
+				todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
 			)
 		)
 	}
@@ -35,7 +40,7 @@ function App() {
 	}
 
 	const resetCompletedTodosHandler = () => {
-		setTodos(todos.filter((todo) => todo.isCompleted === false))
+		setTodos((prevTodos) => prevTodos.filter((todo) => !todo.isCompleted))
 	}
 
 	const completedTodosCount = todos.filter((todo) => todo.isCompleted).length
