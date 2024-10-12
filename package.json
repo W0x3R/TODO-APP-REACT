@@ -1,5 +1,5 @@
 {
-	"name": "99-template",
+	"name": "TODO-APP-REACT",
 	"version": "0.1.0",
 	"homepage": "https://w0x3r.github.io/TODO-APP-REACT/",
 	"private": true,
@@ -18,8 +18,8 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"build serve": "serve -s build",
+		"clean": "rd /s /q build"
 	},
 	"eslintConfig": {
 		"extends": [
